@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="msg">오늘은 쌤한테 피피티 달라고 했는데 표정이 좋지 않았다.</p>
+
+
+    <script>
+        let msg = document.getElementById("msg")
+        console.log(msg);
+
+
+        // ★HTML 태그와 같이 내용을 적용할 때 : innerHTML
+        // 택스트 내용만 적용할 때 : textContent
+        
+        //p태그의 전체 내용 접근
+        console.log(msg.innerHTML);
+
+        //p태그의 내용 변경하기
+       msg.innerHTML = "진짜다!!얼굴 표정이 좋지 않았다.";
+       msg.innerHTML += "<span>받고 태그 하나 더</span>"
+       
+       //p태그의 텍스트값 접근
+       console.log(msg.textContent);
+
+       //p태그의 텍스트값 변경
+       msg.textContent = "텍스트값 바꿔볼게 얍!"
+       msg.textContent += "<span>뭘보냐는 표정이였다.</span>"
+
+
+    </script>
+
+</body>
+</html>

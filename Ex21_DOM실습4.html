@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 255px;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="name">
+    <button id="btn">변경</button>
+    <br><br>
+    <img id = "img" src="https://mblogthumb-phinf.pstatic.net/MjAxNzA4MTZfMTI4/MDAxNTAyODczMDAzMjA4.AcFuSDG7LvtWWdmQe8SRcqJBEL8KSOQq_QKJ3A9bvEkg.mSy3tlsNAGBVyMoWE7VnsbSrkWt-mcUT0u4Z59CxzEEg.JPEG.nong-up/%EB%A7%90%EB%A7%8E%EA%B3%A0%EC%98%A4%ED%95%B4%EB%A7%8E%EC%9D%80%EB%8F%BC%EC%A7%803.jpg?type=w800" alt="">
+
+
+    <script>
+        //사진 1(돼지)
+        let url1 = 'https://mblogthumb-phinf.pstatic.net/MjAxNzA4MTZfMTI4/MDAxNTAyODczMDAzMjA4.AcFuSDG7LvtWWdmQe8SRcqJBEL8KSOQq_QKJ3A9bvEkg.mSy3tlsNAGBVyMoWE7VnsbSrkWt-mcUT0u4Z59CxzEEg.JPEG.nong-up/%EB%A7%90%EB%A7%8E%EA%B3%A0%EC%98%A4%ED%95%B4%EB%A7%8E%EC%9D%80%EB%8F%BC%EC%A7%803.jpg?type=w800'
+        //사진 2(원숭이)
+        let url2 = 'https://upload.wikimedia.org/wikipedia/commons/0/09/Portrait_of_a_Proboscis_Monkey.jpg'
+        let name = document.getElementById("name")
+        let btn = document.getElementById("btn")
+
+
+        /*
+        //이미지 속성(src)에 접근하기
+        //.src
+        let img = document.getElementById("img");
+        console.log(img);
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/0/09/Portrait_of_a_Proboscis_Monkey.jpg";
+        */
+
+        //(1)
+        //변경 버튼을 눌렀을 때,
+        //사용자가 input태그에 입력한 값을 감지
+        //그 값을 콘솔창에 띄워보기
+        btn.addEventListener("click", function(){
+            name.focus()
+            if(name.value == "돼지"){
+                img.src = url1;
+                console.log(url1, "돼지");
+                name.value = "";
+            }else if(name.value == "원숭이"){
+                img.src = url2;
+                console.log(url2, "원숭이");
+                name.value = "";
+            }else{
+                alert("잘못 입력!!")
+            }
+        })
+        
+        //(2)
+        //조건에 맞게 사진을 교체
+        //만약 사용자가 input태그에 '돼지'입력했으면
+        //기존 사진을 돼지 사진으로 변경
+        //원숭이도 동일하게 적용
+        //그 외의 텍스트 입력하면 alert - 잘못 입력했어!
+
+
+
+
+        //(3)
+        //사용자의 input태그를 비워주기
+
+    </script>
+
+
+
+
+</body>
+</html>

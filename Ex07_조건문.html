@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        //조건문 : if, if~else, elseif, switch~case
+
+        // let ischanged = confirm("비밀번호를 변경할꺼여?")
+
+        // //만약, 사용자가 '확인'을 눌렀으면~~
+        // if(ischanged == true){
+        //     alert("변경했다임마")
+        // }else{
+        //     alert("안바꿔줄거야 돌아가!")
+        // }
+
+
+
+        let java = prompt("java점수 입력혀봐")
+        let python = prompt("python점수 입력혀봐")
+        let R = prompt(" R점수 입력혀봐")
+
+        let avg = (parseInt(java)+parseInt(python)+parseInt(R))/3
+
+        if(avg >= 90){
+            console.log("너의 점수는", avg,"이고 학점은 A여");
+        }else if(avg >= 80){
+            console.log("너의 점수는", avg,"이고 학점은 B여");
+        }else if(avg >= 70){
+            console.log("너의 점수는", avg,"이고 학점은 C여");
+        }else{
+            console.log("넌 못쓰것다", avg,"이고 F!!!");
+        }
+
+
+    </script>
+    
+</body>
+</html>
